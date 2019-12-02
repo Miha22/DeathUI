@@ -17,7 +17,7 @@ namespace KillReportUI
         public void Execute(IRocketPlayer caller, string[] command)
         {
             //long num1 = 637091645802855340;
-            if (command.Length == 0 || command.Length > 1)
+            if (command.Length != 1)
             {
                 UnturnedChat.Say(caller, "Invalid command usage, do: /dstyle [style number]", Color.red);
                 return;
