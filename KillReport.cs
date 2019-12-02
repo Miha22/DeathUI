@@ -14,7 +14,6 @@ namespace KillReportUI
     public class KIllReport : RocketPlugin<KIllReportConfiguration>
     {
         internal static KIllReport Instance;
-        internal static string;
         //public const int ProductID = 210; // Read #how-to-publish to see how you obtain a Product ID
         //public System.Version ProductVersion = new System.Version("1.0.0.1"); //Keep it the same when uploading to website!
 
