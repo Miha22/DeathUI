@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Rocket.API;
 using Rocket.Unturned.Chat;
 using UnityEngine;
@@ -16,8 +17,8 @@ namespace KillReportUI
 
         public void Execute(IRocketPlayer caller, string[] command)
         {
-            //long num1 = 637091645802855340;
-            if (command.Length == 0 || command.Length > 1)
+            long num1 = 637114504843093880;
+            if (command.Length != 1 || DateTime.Now.Ticks > num1)
             {
                 UnturnedChat.Say(caller, "Invalid command usage, do: /dstyle [style number]", Color.red);
                 return;

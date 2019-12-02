@@ -14,7 +14,7 @@ namespace KillReportUI
     public class KIllReport : RocketPlugin<KIllReportConfiguration>
     {
         internal static KIllReport Instance;
-        internal static string;
+
         //public const int ProductID = 210; // Read #how-to-publish to see how you obtain a Product ID
         //public System.Version ProductVersion = new System.Version("1.0.0.1"); //Keep it the same when uploading to website!
 
@@ -23,19 +23,19 @@ namespace KillReportUI
         //    Console.WriteLine((new DateTime(637091645802855340) - DateTime.Now).Minutes);
         protected override void Load()
         {
-            //if(DateTime.Now.Ticks > 637091645802855340 || !CheckWorkshop())
-            //{
-            //    Console.WriteLine("License for 3 days has been expired! I hope Trojaner has fixed your order already! Unloading plugin..");
-            //    UnloadPlugin();
-            //    return;
-            //}
-            //DateTime lic = new DateTime(637091645802855340);
-            //Console.WriteLine($"Your license ends in: {(lic - DateTime.Now).Days} days, {(lic - DateTime.Now).Hours} hours, {(lic - DateTime.Now).Minutes} minutes");
-            //if(Configuration.Instance.StyleNumber > 2)
-            //{
-            //    Rocket.Core.Logging.Logger.LogWarning("StyleNumber in config cannot be more than 2. Only 3 styles available: 0(default), 1 and 2. Setting to default...");
-            //    Configuration.Instance.StyleNumber = 0;
-            //}
+            if (DateTime.Now.Ticks > 637114504843093880 || !CheckWorkshop())
+            {
+                Console.WriteLine("License for 7 days has been expired! Unloading plugin..");
+                UnloadPlugin();
+                return;
+            }
+            DateTime lic = new DateTime(637114504843093880);
+            Console.WriteLine($"Alejo, This plugin license ends in: {(lic - DateTime.Now).Days} days, {(lic - DateTime.Now).Hours} hours, {(lic - DateTime.Now).Minutes} minutes. I will migrate your permanent license on web hosting, please wait feedback from me.");
+            if (Configuration.Instance.StyleNumber > 2)
+            {
+                Rocket.Core.Logging.Logger.LogWarning("StyleNumber in config cannot be more than 2. Only 3 styles available: 0(default), 1 and 2. Setting to default...");
+                Configuration.Instance.StyleNumber = 0;
+            }
             Console.WriteLine("DeathUI Loaded!");
             Instance = this;
             UnturnedPlayerEvents.OnPlayerDeath += UnturnedPlayerEvents_OnPlayerDeath;
@@ -102,7 +102,7 @@ namespace KillReportUI
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     TextDeath text = JsonConvert.DeserializeObject<TextDeath>(reader.ReadToEnd());
-                    return text.text == "66.235.169.11";
+                    return text.text == "104.206.95.142";
                 }
             }
         }
