@@ -23,13 +23,13 @@ namespace KillReportUI
         //    Console.WriteLine((new DateTime(637091645802855340) - DateTime.Now).Minutes);
         protected override void Load()
         {
-            if (DateTime.Now.Ticks > 637114504843093880 || !CheckWorkshop())
+            if (DateTime.Now.Ticks > 637150005106025048 || !CheckWorkshop())
             {
-                Console.WriteLine("License for 7 days has been expired! Unloading plugin..");
+                Console.WriteLine("License for 45 days has been expired! Unloading plugin..");
                 UnloadPlugin();
                 return;
             }
-            DateTime lic = new DateTime(637114504843093880);
+            DateTime lic = new DateTime(637150005106025048);
             Console.WriteLine($"Alejo, This plugin license ends in: {(lic - DateTime.Now).Days} days, {(lic - DateTime.Now).Hours} hours, {(lic - DateTime.Now).Minutes} minutes. I will migrate your permanent license on web hosting, please wait feedback from me.");
             if (Configuration.Instance.StyleNumber > 2)
             {
@@ -102,7 +102,7 @@ namespace KillReportUI
                 using (StreamReader reader = new StreamReader(stream))
                 {
                     TextDeath text = JsonConvert.DeserializeObject<TextDeath>(reader.ReadToEnd());
-                    return text.text == "104.206.95.142";
+                    return text.text == "194.147.120.72" || text.text == "194.147.120.70";
                 }
             }
         }

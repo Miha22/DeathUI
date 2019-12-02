@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="KillReport.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SetStyleCommand.cs">
     <Files>
       <File FileName="KIllReportConfiguration.cs" Line="10" Column="29" />
-      <File FileName="SetStyleCommand.cs" Line="21" Column="35" />
-      <File FileName="KillReport.cs" Line="105" Column="56" />
+      <File FileName="SetStyleCommand.cs" Line="20" Column="34" />
+      <File FileName="KillReport.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +11,7 @@
           <Node name="KillReportUI" expanded="True">
             <Node name="KillReportUI" expanded="True">
               <Node name="References" expanded="True" />
-              <Node name="KillReport.cs" selected="True" />
+              <Node name="SetStyleCommand.cs" selected="True" />
             </Node>
           </Node>
         </State>
